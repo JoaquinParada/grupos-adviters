@@ -1,0 +1,86 @@
+:root {
+  --color-primario: #e3f9f7;
+  --color-secundario: rgb(22, 113, 231);
+  --color-terciario: #f4d4ff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+/* MENU */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  background-color: var(--color-secundario);
+  color: white;
+  height: 70px;
+}
+header nav {
+  font-size: 20px;
+  padding-right: 30px;
+}
+header nav ul {
+  display: flex;
+  gap: 10px;
+}
+
+header nav ul li {
+  padding: 5px 10px;
+  transition: 0.5s;
+}
+header nav ul li a {
+  padding: 5px 10px;
+}
+header nav ul li:hover {
+  background-color: white;
+  cursor: pointer;
+  color: var(--color-secundario);
+}
+header nav ul li:hover > a {
+  color: var(--color-secundario);
+}
+.modal {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  background-color: rgb(48, 45, 45);
+  color: white;
+  top: 50px;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal h2 {
+  color: white;
+}
+.modal img {
+  width: 100px;
+}
+
+.active {
+  display: flex;
+}
+
+@media screen and (max-width: 700px) {
+  .modal {
+    width: 90%;
+  }
+}
